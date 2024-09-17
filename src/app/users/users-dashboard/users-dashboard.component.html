@@ -8,10 +8,17 @@
             <th>website</th>
         </tr>
     </thead>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.website}}</td>
+    </tr>
 </table>
 
 <div class="container" *ngIf="adding_user">
-    <app-users-form></app-users-form>
+    <app-users-form (emitter)="add_or_cancel($event)"></app-users-form>
 </div>
 
 <button class="button is-success is-dark" *ngIf="!adding_user" (click)="addUser()">Añadir Usuario</button>

@@ -27,4 +27,13 @@ export class UsersDashboardComponent implements OnInit{
     this.adding_user = true
   }
 
+  add_or_cancel(user: UserSerialization): void {
+    if(user.id != -1)
+      this.users.push(user)
+
+    this.adding_user = false
+
+    console.log(this.users)
+  }
+
 }
