@@ -22,7 +22,7 @@
 <br>
 
 <div class="container" *ngIf="is_adding_user">
-    <app-users-form></app-users-form>
+    <app-users-form (emitter)="add_user_or_cancel($event)"></app-users-form>
 </div>
 
 <button class="button is-primary is-black" *ngIf="!is_adding_user" (click)="init_add_user_process()">Añadir Usuario</button>

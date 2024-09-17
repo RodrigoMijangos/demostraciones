@@ -2,31 +2,31 @@
     <div class="field">
         <label for="name" class="label">Name</label>
         <div class="control">
-            <input type="text" class="input" name="name" placeholder="name">
+            <input type="text" class="input" name="name" placeholder="name" [(ngModel)]="user.name">
         </div>
     </div>
 
     <div class="field">
         <label for="username" class="label">Username</label>
         <div class="control">
-            <input type="text" name="username" id="" class="input" placeholder="Username">
+            <input type="text" name="username" id="" class="input" placeholder="Username" [(ngModel)]="user.username">
         </div>
     </div>
 
     <div class="field">
         <label for="phone" class="label">Phone</label>
-        <input type="text" name="phone" id="" class="input" placeholder="phone">
+        <input type="text" name="phone" id="" class="input" placeholder="phone" [(ngModel)]="user.phone">
     </div>
     <div class="field">
         <label for="website" class="label">Website</label>
-        <input type="text" name="website" id="" class="input" placeholder="website">
+        <input type="text" name="website" id="" class="input" placeholder="website" [(ngModel)]="user.website">
     </div>
 
     <div class="field is-grouped">
         <div class="control">
-            <button class="button is-success is-dark">Enviar</button>
+            <button class="button is-success is-dark" (click)="send_user_or_cancel(true)">Enviar</button>
         </div>
         <div class="control">
-            <button class="button is-danger is-dark">Cancelar</button>
+            <button class="button is-danger is-dark" (click)="send_user_or_cancel(false)">Cancelar</button>
         </div>
     </div>

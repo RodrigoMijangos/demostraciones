@@ -29,6 +29,15 @@ export class UsersDashboardComponent implements OnInit{
   init_add_user_process(): void{
     this.is_adding_user = true
   }
+
+  add_user_or_cancel(user: UserSerialization): void{
+    if(user.id != -1){
+      this.users.push(user)
+    }
+
+    this.is_adding_user = false;
+
+  }
   
 
 }
