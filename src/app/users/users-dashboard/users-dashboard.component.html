@@ -1,0 +1,17 @@
+<table class="table is-fullwidth">
+    <thead>
+        <tr class="is-primary">
+            <th>ID</th>
+            <th>name</th>
+            <th>username</th>
+            <th>phone</th>
+            <th>website</th>
+        </tr>
+    </thead>
+</table>
+
+<div class="container" *ngIf="adding_user">
+    <app-users-form></app-users-form>
+</div>
+
+<button class="button is-success is-dark" *ngIf="!adding_user" (click)="addUser()">Añadir Usuario</button>
