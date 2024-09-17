@@ -11,12 +11,23 @@ export class UsersDashboardComponent implements OnInit{
 
   users: UserSerialization[] = []
 
+  is_adding_user=false
+
   constructor(private _service: UserService){  }
 
   ngOnInit(): void {
       this._service.getAllUsers().subscribe(
-        response => this.users = response
+        response => {
+          this.users = response
+          console.log(
+            JSON.stringify(this.users)
+          )
+        }
       )
+  }
+
+  init_add_user_process(): void{
+    this.is_adding_user = true
   }
   
 
