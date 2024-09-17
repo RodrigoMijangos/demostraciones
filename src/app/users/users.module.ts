@@ -10,6 +10,9 @@ import { UsersDashboardComponent } from './users-dashboard/users-dashboard.compo
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    UsersDashboardComponent
   ]
 })
 export class UsersModule { }
