@@ -1,7 +1,7 @@
 export interface PostSerialization {
 
     id: number,
-    user_id: number,
+    userId: number,
     title: string,
     body: string
 

@@ -10,7 +10,7 @@ export class CardPostComponent {
 
   @Input() post: PostSerialization = {
     id:0,
-    user_id:0,
+    userId:0,
     title: "",
     body: ""
   }
