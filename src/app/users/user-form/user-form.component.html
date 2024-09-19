@@ -1,33 +1,33 @@
 <div class="field">
     <label for="" class="label">Name</label>
     <div class="control">
-        <input type="text" class="input" name="name">
+        <input type="text" class="input" name="name" [(ngModel)]="user.name">
     </div>
 </div>
 <div class="field">
     <label for="" class="label">Username</label>
     <div class="control">
-        <input type="text" class="input" name="username">
+        <input type="text" class="input" name="username" [(ngModel)]="user.username">
     </div>
 </div>
 <div class="field">
     <label for="" class="label">Phone</label>
     <div class="control">
-        <input type="text" class="input" name="phone">
+        <input type="text" class="input" name="phone" [(ngModel)]="user.phone">
     </div>
 </div>
 <div class="field">
     <label for="" class="label">Website</label>
     <div class="control">
-        <input type="text" class="input" name="website">
+        <input type="text" class="input" name="website" [(ngModel)]="user.website">
     </div>
 </div>
 
 <div class="field is-grouped">
     <div class="control">
-        <button class="button is-success is-dark">Aceptar</button>
+        <button class="button is-success is-dark" (click)="add_user_or_cancel(false)">Aceptar</button>
     </div>
     <div class="control">
-        <button class="button is-danger is-dark">Cancelar</button>
+        <button class="button is-danger is-dark" (click)="add_user_or_cancel(true)">Cancelar</button>
     </div>
 </div>

@@ -21,8 +21,8 @@
 
 <br>
 
-<div class="container">
-    <app-user-form></app-user-form>
+<div class="container" *ngIf="is_beign_adding_user">
+    <app-user-form (emmiter)="add_user_or_hide_form($event)"></app-user-form>
 </div>
 
-<button class="button is-success is-dark">Añadir Usuario</button>
+<button class="button is-success is-dark" *ngIf="!is_beign_adding_user" (click)="init_add_user_process()">Añadir Usuario</button>
