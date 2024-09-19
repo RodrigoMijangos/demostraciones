@@ -15,4 +15,9 @@ export class UserService {
   getAllUsers(): Observable<UserSerialization[]>{
     return this._http.get<UserSerialization[]>(this.base_url)
   }
+
+  getUser(id: number): Observable<UserSerialization>{
+    return this._http.get<UserSerialization>(this.base_url + id + "/")
+  }
+
 }
