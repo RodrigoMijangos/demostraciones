@@ -8,7 +8,7 @@ import { PostSerialization } from '../model/interface/post-serialization';
 })
 export class PostService {
 
-  base_url = "https://jsonplaceholder.typicode.com/posts/"
+  private base_url = "https://jsonplaceholder.typicode.com/posts/"
 
   constructor(private _http: HttpClient) { }
 

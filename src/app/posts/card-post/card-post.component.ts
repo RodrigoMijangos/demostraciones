@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PostSerialization } from '../model/interface/post-serialization';
 
 @Component({
   selector: 'app-card-post',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './card-post.component.css'
 })
 export class CardPostComponent {
+
+  @Input() post: PostSerialization = {
+    id:0,
+    user_id:0,
+    title: "",
+    body: ""
+  }
 
 }
