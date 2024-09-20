@@ -13,6 +13,8 @@ import { CardPostComponent } from './card-post/card-post.component';
   imports: [
     CommonModule
   ],
-  exports:[DashboardPostsComponent]
+  exports:[
+    DashboardPostsComponent
+  ]
 })
 export class PostsModule { }
