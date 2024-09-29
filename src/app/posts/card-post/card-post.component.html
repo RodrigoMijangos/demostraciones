@@ -1,11 +1,11 @@
 <div class="card">
     <div class="card-content">
         <p class="title">
-            Este es un post
+            {{view_data.title}}
         </p>
-        <p class="subtitle">Posted by: Usuario</p>
+        <p class="subtitle">Posted by: {{view_data.user.name}}</p>
         <p>
-            Este es el contenido del post
+            {{view_data.body}}
         </p>
     </div>
 </div>

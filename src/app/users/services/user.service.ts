@@ -16,4 +16,9 @@ export class UserService {
     return this._http.get<UserSerialization[]>(this.base_url);
   }
 
+  getUser(id: number): Observable<UserSerialization>{
+    console.log(this.base_url + id + "/")
+    return this._http.get<UserSerialization>(this.base_url + id + "/")
+  }
+
 }
